@@ -17,10 +17,20 @@ References:
 
 Back-end:
 - https://nodejs.org/en/docs/
-- https://docs.flutter.dev/
 - https://docs.mongodb.com/
 - https://expressjs.com/en/5x/api.html
 - https://youtu.be/ZEg03f1o_vQ
+- https://www.npmjs.com/package/jsonwebtoken
+- https://socket.io/docs/v4/
+- https://learning.postman.com/docs/getting-started/introduction/
+- https://youtu.be/VVGgacjzc2Y
+- https://youtu.be/bxsemcrY4gQ
+- https://youtu.be/2D_76lkyF1c
+- https://youtu.be/ZEg03f1o_vQ
+- https://youtu.be/czed-wa21IU
+- https://youtu.be/T0OihVnWb_0
+- https://youtu.be/358kUe0CKiE
+- https://youtu.be/D0U8vD8m1I0
 
 Front-end:
 - https://developers.google.com/maps/documentation/javascript/markers#maps_marker_symbol_custom-javascript
