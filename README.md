@@ -8,11 +8,11 @@ according to the part that he worked on.
 References:
 
 Back-end:
-	- https://nodejs.org/en/docs/
-	- https://docs.flutter.dev/
-	- https://docs.mongodb.com/
-	- https://expressjs.com/en/5x/api.html
-	- https://youtu.be/ZEg03f1o_vQ
+- https://nodejs.org/en/docs/
+- https://docs.flutter.dev/
+- https://docs.mongodb.com/
+- https://expressjs.com/en/5x/api.html
+- https://youtu.be/ZEg03f1o_vQ
 
 Front-end:
 	- https://developers.google.com/maps/documentation/javascript/markers#maps_marker_symbol_custom-javascript
