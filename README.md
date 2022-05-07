@@ -1,6 +1,6 @@
 These are the files of the implementation part of the project
 
-They are separated into Front-end (Flutter), Back-end (NodeJS, Express, MongoDB), sensor, and the machine learning part.
+They are separated into Front-end (Flutter), Back-end (NodeJS, Express, MongoDB), and the machine learning part.
 
 These parts are divided among the team members, the name of the member who worked on a part will be marked
 according to the part that he worked on. 
@@ -12,7 +12,6 @@ Front-end => Amro
 
 Mahcine learning => Alahmadi & Albar
 
-Sensor => Albar
 
 References:
 
