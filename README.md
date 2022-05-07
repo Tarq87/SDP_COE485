@@ -15,15 +15,15 @@ Back-end:
 - https://youtu.be/ZEg03f1o_vQ
 
 Front-end:
-	- https://developers.google.com/maps/documentation/javascript/markers#maps_marker_symbol_custom-javascript
-	- https://pub.dev/
-	- https://youtu.be/aTPkos3LKi8 
-	- https://youtu.be/McPzVZZRniU 
-	- https://youtu.be/THCkkQ-V1-8
-	- https://youtu.be/F3JuuYuOUK4 
-	- https://recharts.org/en-US/api/LineChart
-	- https://v4.mui.com/components/material-icons/
-	- https://developers.google.com/maps/documentation/utilities/polylineutility 
+- https://developers.google.com/maps/documentation/javascript/markers#maps_marker_symbol_custom-javascript
+- https://pub.dev/
+- https://youtu.be/aTPkos3LKi8 
+- https://youtu.be/McPzVZZRniU 
+- https://youtu.be/THCkkQ-V1-8
+- https://youtu.be/F3JuuYuOUK4 
+- https://recharts.org/en-US/api/LineChart
+- https://v4.mui.com/components/material-icons/
+- https://developers.google.com/maps/documentation/utilities/polylineutility 
 
 Machine-learning:
-	- https://github.com/SmartPracticeschool/SBSPS-Challenge-1029-AI-powered-Public-Transport-Management-System
+- https://github.com/SmartPracticeschool/SBSPS-Challenge-1029-AI-powered-Public-Transport-Management-System
