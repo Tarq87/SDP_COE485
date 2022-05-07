@@ -19,4 +19,4 @@ This part of the project was done by (Tariq & Ammar) as the following (estimatio
 	- get_tickets => Tariq & Ammar
 	- get_driver => Ammar
 	- tickets_sales => Ammar
-*Notes: This assignment of distribution is estimated
+This assignment of distribution is estimated
