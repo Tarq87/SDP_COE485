@@ -45,3 +45,4 @@ Front-end:
 
 Machine-learning:
 - https://github.com/SmartPracticeschool/SBSPS-Challenge-1029-AI-powered-Public-Transport-Management-System
+- https://github.com/mishraraaj/Traffics_demand_prediction/blob/main/Traffics_movement_Prediction_Capstone_Project.ipynb
