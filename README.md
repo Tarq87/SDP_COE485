@@ -5,6 +5,11 @@ These parts are divided among the team members, the name of the member who worke
 according to the part that he worked on. 
 
 
+Back-end => Tariq & Ammar
+Front-end => Amro
+Mahcine learning => Alahmadi & Albar
+Sensor => Albar
+
 References:
 
 Back-end:
