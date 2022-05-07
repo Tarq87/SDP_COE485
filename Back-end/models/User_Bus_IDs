@@ -1,0 +1,27 @@
+var mongoose = require('mongoose')
+var Schema = mongoose.Schema;
+var use_bus_ids = new Schema({
+
+    user_id: {
+        type: String,
+        require: true
+    },
+
+    bus_id: {
+        type: String,
+        require: true
+    },
+
+    type: {
+        type: Number,
+        require: true
+
+    },
+
+    createdAt: { type: Date, default: Date.now }
+
+})
+
+
+
+module.exports = mongoose.model('User_Bus_Id', use_bus_ids)

@@ -1,0 +1,6 @@
+{
+    "editor.fontSize": 20,
+    "window.zoomLevel": 1,
+    "appService.deploySubpath": ".",
+    "appService.defaultWebAppToDeploy": "/subscriptions/bd4aedbd-ab3a-4635-97cf-cb8922dcaef6/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/SeniorDesignProject"
+}
