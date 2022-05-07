@@ -1,7 +1,7 @@
-var mongoose = require('mongoose')
-var Schema = mongoose.Schema;
+let mongoose = require('mongoose')
+let Schema = mongoose.Schema;
 
-var GoeSchema = new Schema ({
+let GoeSchema = new Schema ({
     type: { 
         type: String, 
         default: "Point"

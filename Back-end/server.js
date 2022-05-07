@@ -86,19 +86,19 @@ io.on("connection", (socket) => {
                                 }else {
                                     socket.emit("user-stream-feedback",{status: true, msg: 'valid'})
                                     //found in reserved ticket? add the ticket to the activated ticket and remove it from reserved ticket 
-                                    var one_hour = Activated_Ticket ({
+                                    let one_hour = Activated_Ticket ({
                                         _id: result1.id,
                                         user_id:result1.user_id,
                                         type:result1.type
                                     })
 
-                                    var ticket_for_history = Ticket_history({
+                                    let ticket_for_history = Ticket_history({
                                         ticket_id: result1.id,
                                         user_id:result1.user_id,
                                         type:result1.type
                                     })
 
-                                    var user_and_bus = User_Bus_Id({
+                                    let user_and_bus = User_Bus_Id({
                                         bus_id: received.bus_id,
                                         user_id:result1.user_id,
                                         type:result1.type
@@ -121,7 +121,7 @@ io.on("connection", (socket) => {
                                     }).find((err, results2) => {
                                         if (err) { console.log(err) }
                                         if (results2[0] != null) {
-                                            var ticket_data = Ticket({
+                                            let ticket_data = Ticket({
                                                 // Extract data from the body
                                                 bus_id: received.bus_id,
                                                 user_id:result1.user_id,
@@ -131,7 +131,7 @@ io.on("connection", (socket) => {
                                                 bus_station:results2[0].name
                                             });
                                         }else {
-                                            var ticket_data = Ticket({
+                                            let ticket_data = Ticket({
                                                 // Extract data from the body
                                                 bus_id: received.bus_id,
                                                 user_id:result1.user_id,
@@ -179,7 +179,7 @@ io.on("connection", (socket) => {
                         }).find((err, results2) => {
                             if (err) { console.log(err) }
                             if (results2[0] != null) {
-                                var ticket_data = Ticket({
+                                let ticket_data = Ticket({
                                     // Extract data from the body
                                     bus_id: received.bus_id,
                                     user_id:result.user_id,
@@ -189,7 +189,7 @@ io.on("connection", (socket) => {
                                     bus_station:results2[0].name
                                 });
                             }else {
-                                var ticket_data = Ticket({
+                                let ticket_data = Ticket({
                                     // Extract data from the body
                                     bus_id: received.bus_id,
                                     user_id:result.user_id,
@@ -200,7 +200,7 @@ io.on("connection", (socket) => {
                                 });
                             }
 
-                            var user_and_bus = User_Bus_Id({
+                            let user_and_bus = User_Bus_Id({
                                 bus_id: received.bus_id,
                                 user_id:result.user_id,
                                 type:result.type
@@ -222,10 +222,6 @@ io.on("connection", (socket) => {
                             })
                                     
 
-
-                        //var post = Capacity.findOne({bus_id: received.bus_id}); 
-                        //Capacity.findOneAndUpdate(post, {capacity: 1},{ upsert: true } )
-                        //res.status(200).json({status: true, msg: 'valid!'})
                     }
                 }
                 
@@ -234,7 +230,6 @@ io.on("connection", (socket) => {
         
     })
 
-    // socket.emit("user-stream-feedback", "")
     socket.on("user-stream-location", (received) =>{
         User_Bus_Id.find({ user_id: received.user_id}, function (err, docs1) {
             console.log(docs1[0])
@@ -276,7 +271,7 @@ io.on("connection", (socket) => {
                                 //console.log(results2)
                                 //if (err) { console.log(err) }
                                 if (results2[0] != null) {
-                                    var ticket_data = Ticket({
+                                    let ticket_data = Ticket({
                                         // Extract data from the body
                                         bus_id: BUS,
                                         user_id:received.user_id,
@@ -287,7 +282,7 @@ io.on("connection", (socket) => {
                                     });
 
                                 }else {
-                                    var ticket_data = Ticket({
+                                    let ticket_data = Ticket({
                                         // Extract data from the body
                                         bus_id: BUS,
                                         user_id:received.user_id,

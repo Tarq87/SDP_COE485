@@ -1,8 +1,8 @@
-var mongoose = require('mongoose')
-var Schema = mongoose.Schema;
+let mongoose = require('mongoose')
+let Schema = mongoose.Schema;
 
 
-var Bus_stop = new Schema({
+let Bus_stop = new Schema({
     name: {
         type: String,
         require: true

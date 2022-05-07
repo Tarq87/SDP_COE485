@@ -1,6 +1,6 @@
-var mongoose = require('mongoose')
-var Schema = mongoose.Schema;
-var Ticket_history_schema = new Schema({
+let mongoose = require('mongoose')
+let Schema = mongoose.Schema;
+let Ticket_history_schema = new Schema({
 
     ticket_id: {
         type: String,

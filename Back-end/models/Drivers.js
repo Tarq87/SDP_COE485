@@ -1,8 +1,8 @@
-var mongoose = require('mongoose')
-var Schema = mongoose.Schema;
+let mongoose = require('mongoose')
+let Schema = mongoose.Schema;
 
 
-var Drivers = new Schema({
+let Drivers = new Schema({
     
     driver_name: {
         type: String,

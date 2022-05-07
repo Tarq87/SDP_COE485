@@ -1,6 +1,6 @@
-var mongoose = require('mongoose')
-var Schema = mongoose.Schema;
-var Activated_Ticket_schema = new Schema({
+let mongoose = require('mongoose')
+let Schema = mongoose.Schema;
+let Activated_Ticket_schema = new Schema({
 
     user_id: {
         type: String,

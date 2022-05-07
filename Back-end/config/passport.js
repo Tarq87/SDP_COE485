@@ -1,14 +1,14 @@
 // This module lets you authenticate endpoints using a JSON web token. 
 // It is intended to be used to secure RESTful endpoints without sessions.
 
-var JwtStrategy = require('passport-jwt').Strategy
-var ExtractJwt = require('passport-jwt').ExtractJwt
+let JwtStrategy = require('passport-jwt').Strategy
+let ExtractJwt = require('passport-jwt').ExtractJwt
 
-var User = require('../models/user')
-var config = require('./dbconfig')
+let User = require('../models/user')
+let config = require('./dbconfig')
 
 module.exports = function (passport) {
-    var opts = {}
+    let opts = {}
     // secretOrKey is a string or buffer containing the secret (symmetric) or 
     // PEM-encoded public key (asymmetric) for verifying the token's signature.
     opts.secretOrKey = config.secret

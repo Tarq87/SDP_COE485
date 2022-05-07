@@ -1,7 +1,7 @@
-var mongoose = require('mongoose')
-var Schema = mongoose.Schema;
+let mongoose = require('mongoose')
+let Schema = mongoose.Schema;
 
-var Bus_Location = new Schema({
+let Bus_Location = new Schema({
     bus_id: {
         type: String,
         require: true

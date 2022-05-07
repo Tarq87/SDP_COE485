@@ -1,7 +1,7 @@
-var mongoose = require('mongoose')
-var Schema = mongoose.Schema;
-var bcrypt = require('bcrypt')
-var userSchema = new Schema({
+let mongoose = require('mongoose')
+let Schema = mongoose.Schema;
+let bcrypt = require('bcrypt')
+let userSchema = new Schema({
     name: {
         type: String,
         require: true,
@@ -22,7 +22,7 @@ var userSchema = new Schema({
 // Encrypt the password before saving it
 // https://mongoosejs.com/docs/middleware.html#pre
 userSchema.pre('save', function (next) {
-    var user = this;
+    let user = this;
     // isModified = Returns true if any of the given paths is modified, else false
     if (this.isModified('password') || this.isNew) {
         // https://heynode.com/blog/2020-04/salt-and-hash-passwords-bcrypt/

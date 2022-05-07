@@ -1,0 +1,22 @@
+This part of the project was done by (Tariq & Ammar) as the following (estimation of the work done by each member):
+- The "config" folder by Tariq & Ammar
+- The "methods" folder has the actions file which contains multiple functions:
+	- addNew => Tariq
+	- authenticate => Tariq & Ammar
+	- getinfo => Tariq
+	- check_ticket => Tariq & Ammar
+	- R_ticket => Ammar
+	- Bus_Stops_List => Ammar
+	- Update_Tickets => Tairq
+	- BusLocation => Ammar
+	- addlocations => Tariq & Ammar
+	- request_buses_location => Tariq & Ammar
+	- calcCrow => Ammar
+	- toRad => Ammar
+	- points => Tariq
+	- Bus_Capacity => Ammar
+	- get_users => Tariq & Ammar
+	- get_tickets => Tariq & Ammar
+	- get_driver => Ammar
+	- tickets_sales => Ammar
+Note: This assignment of distribution is estimated

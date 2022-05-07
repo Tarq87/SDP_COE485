@@ -15,13 +15,11 @@ let moment = require('moment')
 
 
 
-// CHANGE VAR TO LET OR CONST.
-
 const mongoose = require('mongoose')
 
 
-var jwt = require('jwt-simple')
-var config = require('../config/dbconfig')
+let jwt = require('jwt-simple')
+let config = require('../config/dbconfig')
 const { db } = require('../models/user')
 const Bus_Station = require('../models/Bus_Station')
 const { eventNames } = require('npmlog')
@@ -30,7 +28,7 @@ const { timeout } = require('nodemon/lib/config')
 const { stringify } = require('nodemon/lib/utils')
 
 
-var functions = {
+let functions = {
     addNew: function (req, res) {
         let points_var = Points({
 
@@ -46,7 +44,7 @@ var functions = {
             res.json({status: false, msg: 'Enter all fields'})
         }
         else {
-            var newUser = User({
+            let newUser = User({
                 // Extract the name and password from the
                 // body of the request
                 name: req.body.name,
@@ -78,7 +76,7 @@ var functions = {
                     // check whether the password is right or not
                     user.comparePassword(req.body.password, function (err, isMatch) {
                         if (isMatch && !err) {
-                            var id = jwt.encode(user, config.secret)
+                            let id = jwt.encode(user, config.secret)
                             // return to the front-end the id
                             res.json({id: id, status: true})
                         }
@@ -92,8 +90,8 @@ var functions = {
     },
     getinfo: function (req, res) {
         if (req.headers.authorization && req.headers.authorization.split(' ')[0] === 'Bearer') {
-            var id = req.headers.authorization.split(' ')[1]
-            var decoded_id = jwt.decode(id, config.secret)
+            let id = req.headers.authorization.split(' ')[1]
+            let decoded_id = jwt.decode(id, config.secret)
             return res.json({status: true, msg: 'Hello ' + decoded_id.name})
         }
         else {
@@ -103,7 +101,7 @@ var functions = {
 
     //From the scanner 
     check_ticket: function (req, res,next){
-        var ticket_data = Ticket({
+        let ticket_data = Ticket({
             // Extract data from the body
             ticket_id: req.body.ticket_id,
             bus_id: req.body.bus_id,
@@ -134,7 +132,7 @@ var functions = {
                                         res.status(404).json({status: false, msg: 'Not valid'})
                                     }else {
                                         //found in reserved ticket? add the ticket to the activated ticket and remove it from reserved ticket 
-                                        var one_hour = Activated_Ticket ({
+                                        let one_hour = Activated_Ticket ({
                                             _id: result1.id,
                                             user_id:result1.user_id,
                                             type:result1.type
@@ -162,7 +160,7 @@ var functions = {
     },
  
     R_ticket: async function (req, res){
-        var R_ticket = R_Ticket({
+        let R_ticket = R_Ticket({
             // Extract data from the body
             user_id: req.body.user_id,
             type: req.body.type
@@ -233,8 +231,8 @@ var functions = {
          console.log("Activated")
          console.log(activated)
 
-         var ticket_ids = [];
-         var ticket_types = [];
+         let ticket_ids = [];
+         let ticket_types = [];
         
          for (i = 0 ; i < Reserved.length ; i++) {
              ticket_ids.push(Reserved[i]._id)
@@ -251,27 +249,6 @@ var functions = {
          res.send({ticket_id:ticket_ids, ticket_type:ticket_types}) 
          
     },
-    /*
-
-    Capacity: async function (req, res) {
-        var cap = Capacity({
-            // Extract data from the body
-            bus_id: req.body.bus_id,
-            capacity: req.body.capacity
-
-        });
-        cap.save() 
-        res.send("DONE")
-        //console.log("HII")
-        
-        //var post = Capacity.findOne({bus_id: req.body.bus_id}); 
-        //await Capacity.findOneAndUpdate(post, {$inc : {capacity: 10}},{new: true} )
-        //res.send ("DONE")
-
-        //res.send("DONE")
-    }, 
-    */
-
     BusLocation: async function (req,res) { 
             await Bus_Location.find({
                 location: {
@@ -294,7 +271,7 @@ var functions = {
                     
     }, 
     addlocations: async function (req,res) {
-        var bus_location = Bus_Location({
+        let bus_location = Bus_Location({
             // Extract data from the body
             bus_id: req.body.bus_id,
             location: req.body.location
@@ -324,17 +301,17 @@ var functions = {
     calcCrow: function (lat1, lon1, lat2, lon2) 
     {
         
-      var R = 6371; // km
-      var dLat = this.toRad(lat2-lat1);
-      var dLon = this.toRad(lon2-lon1);
-      var lat1 = this.toRad(lat1);
-      var lat2 = this.toRad(lat2);
+        let R = 6371; // km
+        let dLat = this.toRad(lat2-lat1);
+        let dLon = this.toRad(lon2-lon1);
+        let lat1 = this.toRad(lat1);
+        let lat2 = this.toRad(lat2);
 
-      var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+        let a = Math.sin(dLat/2) * Math.sin(dLat/2) +
         Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2); 
-      var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-      var d = R * c;
-      return d*1000;
+        let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+        let d = R * c;
+        return d*1000;
     },
 
     // Converts numeric degrees to radians
@@ -444,19 +421,19 @@ var functions = {
         const first_day_week = moment().startOf("isoweek")
         const last_day_week = moment().endOf("isoweek")
 
-        var all = await Ticket_history.find({
+        let all = await Ticket_history.find({
             createdAt: {
               $gte: first_day_week,
               $lte: last_day_week
             }
         })
 
-        var today = moment();
-        var yesterday = moment().add(-1,'days');
-        var before0_yesterday = moment().add(-2,'days');
-        var before1_yesterday = moment().add(-3,'days');
-        var before2_yesterday = moment().add(-4,'days');
-        var before3_yesterday = moment().add(-5,'days');
+        let today = moment();
+        let yesterday = moment().add(-1,'days');
+        let before0_yesterday = moment().add(-2,'days');
+        let before1_yesterday = moment().add(-3,'days');
+        let before2_yesterday = moment().add(-4,'days');
+        let before3_yesterday = moment().add(-5,'days');
 
         let today_ticket = 0 
         let yesterday_ticket = 0 
@@ -483,7 +460,7 @@ var functions = {
             }
         }
 
-        var arr = [{ticket_sales: today_ticket, Date: today.format('LL')},{ticket_sales:yesterday_ticket, Date:yesterday.format('LL')},{ticket_sales:yesterday0_ticket, Date:before0_yesterday.format('LL')},{ticket_sales:yesterday1_ticket, Date: before1_yesterday.format('LL')},{ticket_sales:yesterday2_ticket, Date:before2_yesterday.format('LL')},{ticket_sales:yesterday3_ticket, Date: before3_yesterday.format('LL')}]
+        let arr = [{ticket_sales: today_ticket, Date: today.format('LL')},{ticket_sales:yesterday_ticket, Date:yesterday.format('LL')},{ticket_sales:yesterday0_ticket, Date:before0_yesterday.format('LL')},{ticket_sales:yesterday1_ticket, Date: before1_yesterday.format('LL')},{ticket_sales:yesterday2_ticket, Date:before2_yesterday.format('LL')},{ticket_sales:yesterday3_ticket, Date: before3_yesterday.format('LL')}]
         res.send(arr)
 
     }
