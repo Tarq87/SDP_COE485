@@ -19,4 +19,6 @@ This part of the project was done by (Tariq & Ammar) as the following (estimatio
 	- get_tickets => Tariq & Ammar
 	- get_driver => Ammar
 	- tickets_sales => Ammar
-*Note: This assignment of distribution is estimated
+- The "models" folder contain multiple schemas for MongoDB => Tariq & Ammar
+- The "routes" folder => Tariq & Ammar
+- The "server" file => Tariq & Ammar
