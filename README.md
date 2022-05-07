@@ -6,8 +6,11 @@ according to the part that he worked on.
 
 
 Back-end => Tariq & Ammar
+
 Front-end => Amro
+
 Mahcine learning => Alahmadi & Albar
+
 Sensor => Albar
 
 References:
