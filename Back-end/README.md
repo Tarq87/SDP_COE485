@@ -1,5 +1,4 @@
 This part of the project was done by (Tariq & Ammar) as the following (estimation of the work done by each member):
-Note: This assignment of distribution is estimated
 - The "config" folder by Tariq & Ammar
 - The "methods" folder has the actions file which contains multiple functions:
 	- addNew => Tariq
@@ -20,4 +19,4 @@ Note: This assignment of distribution is estimated
 	- get_tickets => Tariq & Ammar
 	- get_driver => Ammar
 	- tickets_sales => Ammar
-
+*Note: This assignment of distribution is estimated
