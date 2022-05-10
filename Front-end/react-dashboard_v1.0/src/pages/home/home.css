@@ -3,6 +3,6 @@
 }
 
 .homeWidgets{
-    display: flex;
+    display: block;
     margin: 20px;
 }

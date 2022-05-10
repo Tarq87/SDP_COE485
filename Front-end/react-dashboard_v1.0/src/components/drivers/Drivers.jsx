@@ -5,29 +5,6 @@ import { DeleteOutline } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import axios from 'axios'
 
-const driversTest = [
-  {
-    id: 1,
-    bus_id: "A100",
-    driver_name: "Ammar Alkhalifa"
-  },
-  {
-    id: 2,
-    bus_id: "A101",
-    driver_name: "Amro Ghndakji"
-  },
-  {
-    id: 3,
-    bus_id: "A102",
-    driver_name: "Tariq Alshaya"
-  },
-  {
-    id: 4,
-    bus_id: "A103",
-    driver_name: "Mohammed Elrabaa"
-  },
-]
-
 export class Drivers extends Component {
 
   constructor(props) {
@@ -50,7 +27,7 @@ export class Drivers extends Component {
   }
 
   render() {
-    var driversTmp = driversTest
+    var driversTmp = this.state.drivers
 
     const handleDelete = (id) => {
       driversTmp.filter((item) => item.id !== id);

@@ -31,14 +31,21 @@ export default class WidgetLg extends Component {
       <h3 className="widgetLgTitle">Latest transactions</h3>
       <table className="widgetLgTable">
         <tr className="widgetLgTr">
-          <th className="widgetLgTh">Customer</th>
+          {
+            /*
+<th className="widgetLgTh">Customer</th>
+            */
+          }
+          
           <th className="widgetLgTh">Date</th>
           <th className="widgetLgTh">Ticket ID</th>
           <th className="widgetLgTh">Ticket Type</th>
         </tr>
           {tickets.map((ticket) => {
             return <tr className="widgetLgTr">
-            <td className="widgetLgUser">
+              {
+                /*
+<td className="widgetLgUser">
               <img
                 src="https://icons.veryicon.com/png/o/miscellaneous/two-color-webpage-small-icon/user-244.png"
                 alt=""
@@ -46,6 +53,9 @@ export default class WidgetLg extends Component {
               />
               <span className="widgetLgName">{ticket.user_id}</span>
             </td>
+                */
+              }
+            
             <td className="widgetLgDate">{ticket.Date}</td>
             <td className="widgetLgAmount">{ticket.ticket_id}</td>
             <td className="widgetLgAmount">{ticket.ticket_type}</td>

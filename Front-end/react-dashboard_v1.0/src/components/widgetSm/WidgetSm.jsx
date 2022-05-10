@@ -3,6 +3,8 @@ import "./widgetSm.css";
 import React, { Component } from 'react'
 import axios from 'axios'
 
+var activeMembersCount = 0
+
 export default class WidgetSm extends Component {
 
   constructor(props) {
@@ -14,6 +16,7 @@ export default class WidgetSm extends Component {
   }
 
   componentDidMount(){
+    activeMembersCount = 0
     axios.get('https://seniordesignproject.azurewebsites.net/getusers')
     .then(response =>{
       this.setState({
@@ -21,16 +24,26 @@ export default class WidgetSm extends Component {
       })
       console.log('### get users response from API')
       console.log(response.data)
+      this.state.users.map((user) => {
+        return activeMembersCount++
+      })
     }).catch(err => console.log(err))
   }
 
   render() {
-    var users = this.state.users
     return (
       <div className="widgetSm">
-      <span className="widgetSmTitle">Members</span>
-      <ul className="widgetSmList">
-      {users.map((user) => {
+      <span className="widgetSmTitle">Active Members</span>
+      <div className="widgetSmListItem">
+      <img
+                src="https://icons.veryicon.com/png/o/miscellaneous/two-color-webpage-small-icon/user-244.png"
+                alt=""
+                className="widgetSmImg"
+              />
+      {
+
+/*      
+      users.map((user) => {
               return <li className="widgetSmListItem">
               <img
                 src="https://icons.veryicon.com/png/o/miscellaneous/two-color-webpage-small-icon/user-244.png"
@@ -41,19 +54,21 @@ export default class WidgetSm extends Component {
                 <span className="widgetSmUsername">{user.username}</span>
                 <span className="widgetSmUserTitle">{user.email}</span>
               </div>
-              {
-                /*
+           
+                
                 button className="widgetSmButton">
                 <Visibility className="widgetSmIcon" />
                 Display
               </button>
-                */
-              }
+                
+            
             </li>
-            })}
-        
-      </ul>
-    </div>
+            })
+*/            
+            }
+      <span className="widgetSmUser">{activeMembersCount}</span>
+      </div>
+      </div>
     )
   }
 }
