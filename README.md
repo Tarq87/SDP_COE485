@@ -12,6 +12,8 @@ Front-end => Amro
 
 Mahcine learning => Alahmadi & Albar
 
+Sensor => Albar
+
 
 References:
 
